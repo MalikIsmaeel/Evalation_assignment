@@ -35,13 +35,7 @@
         </ul>
       </div>
     </div>
-    <ul class="dropdown-menu m-2">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><hr class="dropdown-divider" /></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
   </nav>
 </template>
-<script setup lang="ts"></script>
+<script></script>
 <style></style>
