@@ -16,10 +16,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            <NuxtLink to="/" class="btn btn-primary"> {{ $t("home") }}</NuxtLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Link</a>
+            <li class="nav-item">
+            <NuxtLink to="/create" class="btn btn-primary"> {{ $t("create") }}</NuxtLink>
+          </li>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -35,6 +37,11 @@
         </ul>
       </div>
     </div>
+
+    <NuxtLink :to="switchLocalePath('en')" class="btn btn-secondary m-1"
+      >English</NuxtLink
+    >
+    <NuxtLink :to="switchLocalePath('ar')" class="btn btn-secondary m-1">عربي</NuxtLink>
   </nav>
 </template>
 <script></script>

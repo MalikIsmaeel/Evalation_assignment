@@ -1,14 +1,45 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@nuxtjs/i18n'],
+  i18n:{
+lazy:true,
+langDir:'lang/',
+strategy:"prefix_except_default",
+defaultLocale :'en',
+
+locales: [
+    {
+      code: 'en',
+      iso: 'en-US',
+      dir: 'ltr',
+      file:'en-US.json'
+    },
+    {
+      code: 'es',
+      iso: 'es-ES',
+      dir: 'ltr',
+
+      file:'en-US.json'
+    },
+    {
+      code: 'ar',
+      iso: 'ar-SA',
+      dir: 'rtl',
+      file:'ar-SA.json'
+    }
+  ]
+  },
+ 
   devtools: { enabled: false },
   app: {
     head: {
       title: "Nuxt Blog",
       meta: [{ charset: 'utf-8', }, { name: 'viewport' }, { content: 'width=device-width, initial-scale=1' }
-        , { hid: "description", name: 'description', content: "Nuxt Blog meta desc" }
+        , { hid: "description", name: 'description', content: "Nuxt Blog meta desc" },
         ,
       { name: 'format-detection', content: 'telephone=no' }
       ],
+     
       link: [
         {
           rel: 'preconnect',
@@ -46,5 +77,5 @@ export default defineNuxtConfig({
 
     },
 
-  }
+  },
 })

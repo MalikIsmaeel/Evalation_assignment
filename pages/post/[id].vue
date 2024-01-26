@@ -1,31 +1,16 @@
 <template>
-  <div class="containerd-flex justify-center">
-    <div class="row">
-      <div class="my-4 mx-2 col-4">
-        <NuxtLink to="/create" class="btn btn-primary">New Post</NuxtLink>
-      </div>
-      <div class="col-6">
-        <form class="d-flex justify-center searchform my-4 mx-2" role="search">
-          <input
-            class="form-control search"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-primary mx-1" type="submit">Search</button>
-        </form>
-      </div>
-
-      <div class="card my-2 col-md-5 mx-3 border-0">
-        <div class="card-header bg-blue"></div>
-        <div class="card-body">
-          <h3 class="avatar bg-gray-400 border-1">{{ singlePost.title }}</h3>
-          <pre>{{ singlePost.description }}</pre>
-        </div>
-
-        <div class="card-footer">{{ singlePost.author }}</div>
-      </div>
+  <div
+    class="card my-2 col-md-5 mx-3 border-0"
+    v-for="post in singlePost"
+    :key="post.index"
+  >
+    <div class="card-header bg-blue"></div>
+    <div class="card-body">
+      <h3 class="avatar bg-gray-400 border-1">{{ post.title }}</h3>
+      <pre>{{ post.descrption }}</pre>
     </div>
+
+    <div class="card-footer">{{ post.author }}</div>
   </div>
 </template>
 <script>
@@ -41,10 +26,10 @@ export default {
   computed: mapState(["posts"]),
 
   computed: {
-    ...mapGetters(["singlePost", "getPosts"]),
+    ...mapGetters(["singlePost"]),
   },
   created() {
-    this.onePosts(35);
+    this.onePosts(this.$route.id);
   },
   methods: {
     ...mapActions(["onePosts"]),

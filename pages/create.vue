@@ -1,9 +1,5 @@
 <template>
   <div class="container">
-    <div class="text-center mt-5">
-      <h1>Create New post</h1>
-    </div>
-
     <div class="row">
       <div class="col-lg-7 mx-auto">
         <div class="card mt-2 mx-auto p-4 bg-light">
@@ -14,11 +10,12 @@
                   <div class="row m-1">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_name">Author *</label>
+                        <label for="form_name">{{ $t("author") }}*</label>
                         <input
                           type="text"
                           class="form-control"
                           id="author"
+                          :placeholder="$t('author_holder')"
                           name="author"
                           required
                           v-model="postData.author"
@@ -27,11 +24,12 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_lastname">title *</label>
+                        <label for="form_lastname">{{ $t("title") }} *</label>
                         <input
                           type="text"
                           class="form-control"
                           id="title"
+                          :placeholder="$t('title_holder')"
                           name="title"
                           v-model="postData.title"
                           required
@@ -43,12 +41,12 @@
                   <div class="row m-2">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label for="form_message">Message *</label>
+                        <label for="form_message">{{ $t("body") }} *</label>
                         <textarea
                           id="tt"
                           name="tt"
                           class="form-control"
-                          placeholder="Write your message here."
+                          :placeholder="$t('body_holder')"
                           rows="4"
                           required="required"
                           v-model="postData.description"
@@ -61,7 +59,7 @@
                       <input
                         type="submit"
                         class="btn btn-success btn-send pt-2 btn-block"
-                        value="Send Message"
+                        :value="$t('save')"
                       />
                     </div>
                   </div>
@@ -121,7 +119,7 @@ label {
 
 .btn-send {
   font-weight: 300;
-  text-transform: uppercase;
+
   letter-spacing: 0.2em;
   width: 100%;
   margin-top: 1rem;
