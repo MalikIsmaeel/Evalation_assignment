@@ -1,7 +1,5 @@
 <template>
-  <div class="card my-2 col-md-5 mx-3 border-0" v-for="post in getPosts" :key="post.id">
-    <div class="card-header bg-blue"></div>
-
+  <div class="card my-2 col-md-5 mx-3 border" v-for="post in getPosts" :key="post.id">
     <div class="card-body">
       {{ post.title }}
       <h3 class="avatar bg-gray-400 border-1">{{ post.author }}</h3>

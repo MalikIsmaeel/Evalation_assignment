@@ -41,25 +41,21 @@ const store = createStore({
   },
     async getPost({commit}){
         const post=axios
-        .get(`http://127.0.0.1:8000/api/posts`)
-       
-        .then((response) => {
-       
+        .get(`http://127.0.0.1:8000/api/posts`).then((response) => {
+      
           commit('addPost',response.data);
           return post
          
       })
         .catch((err) => {
-       console.log(err);
+      //  console.log(err);
         });
        
              
     },
     async onePosts({commit},dataPost){
       const post=axios
-      .get(`http://127.0.0.1:8000/api/posts/${dataPost}`)
-     
-      .then((response) => {
+      .get(`http://127.0.0.1:8000/api/posts/${dataPost}`).then((response) => {
 
         commit('onePostMu',response.data);
        console.log(response.data)

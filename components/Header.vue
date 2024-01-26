@@ -23,17 +23,7 @@
             <NuxtLink to="/create" class="btn btn-primary"> {{ $t("create") }}</NuxtLink>
           </li>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-white"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-          </li>
+         
         </ul>
       </div>
     </div>
