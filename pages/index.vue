@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="containerd-flex justify-center">
     <div class="row">
       <div class="my-4 mx-1 col-4"></div>

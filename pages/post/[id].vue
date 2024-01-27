@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="container">
     <div class="row align-items-start">
       <div class="col-lg-8 m-15px-tb">
