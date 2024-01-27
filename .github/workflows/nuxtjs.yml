@@ -24,6 +24,7 @@ jobs:
     - name: Install & Generate 🔧
       run: |
         npm ci
+        npm production
         npm built 
         npm run generate
       env:
