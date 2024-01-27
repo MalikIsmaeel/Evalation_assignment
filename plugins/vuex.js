@@ -56,7 +56,7 @@ const store = createStore({
     async onePosts({commit},dataPost){
       const post=axios
       .get(`https://mustf.wmc-ksa.com/api/posts/${dataPost}`).then((response) => {
-
+        console.log(dataPost);
         commit('onePostMu',response.data);
        console.log(response.data)
         return post
@@ -79,7 +79,7 @@ state.posts.unshift(...post)
   state.posts =post  
    },
    onePostMu(state,post){
-   
+   console.log(post);
     state.posts =post
 
      },

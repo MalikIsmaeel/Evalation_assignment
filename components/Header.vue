@@ -27,11 +27,13 @@
         </ul>
       </div>
     </div>
-
-    <NuxtLink :to="switchLocalePath('en')" class="btn btn-secondary m-1"
+   <span v-if="$i18n.locale=='ar'">
+    <NuxtLink   :to="switchLocalePath('en')" class="btn nav-link m-1"
       >English</NuxtLink
     >
-    <NuxtLink :to="switchLocalePath('ar')" class="btn btn-secondary m-1">عربي</NuxtLink>
+  </span>
+  <span  v-else="$i18n.locale=='en'"> <NuxtLink :to="switchLocalePath('ar')" class="btn nav-link m-1">عربي</NuxtLink></span>
+   
   </nav>
 </template>
 <script></script>

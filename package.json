@@ -18,6 +18,7 @@
   "dependencies": {
     "axios": "^1.6.5",
     "bootstrap-rtl": "^3.3.4",
+    "nuxi": "^3.10.0",
     "vuex": "^4.1.0"
   }
 }
