@@ -14,10 +14,11 @@
     "nuxt": "^3.9.3",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
+    
   },
   "dependencies": {
     "axios": "^1.6.5",
-    "@nuxtjs/i18n": "^8.0.0",
+    "bootstrap-rtl": "^3.3.4",
     "nuxi": "^3.10.0",
     "vuex": "^4.1.0"
   }
