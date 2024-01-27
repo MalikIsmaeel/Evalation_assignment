@@ -29,7 +29,7 @@ locales: [
     }
   ]
   },
- 
+
   devtools: { enabled: false },
   app: {
     head: {
